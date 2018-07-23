@@ -9,6 +9,7 @@ app.set('views', './app/views');
 //app.set('views', '<novo_local>'); Por padrão o ejs procura as views na pasta views
 								  //Para mudar o local de busca das views usar o código acima
 
+app.use(express.static('./app/public')); //middleware
 app.use(bodyParser.urlencoded({extended: true})); //middleware
 app.use(expressValidator()); //middleware
 
@@ -16,6 +17,7 @@ consign()
 	.include('app/routes')
 	.then('config/dbConnection.js')
 	.then('app/models')
+	.then('app/controllers')
 	.into(app);
 
 module.exports = app;
