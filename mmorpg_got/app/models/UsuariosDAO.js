@@ -8,7 +8,7 @@ UsuariosDAO.prototype.inserirUsuario = function(usuario, res){
 		usuario: usuario,
 		collection: "usuarios",
 		callback: function(err, result) {
-			res.send("olá Marilene");
+			//res.send("olá Marilene"); send causa erro
 		}
 	};
 	this._connection(dados);
