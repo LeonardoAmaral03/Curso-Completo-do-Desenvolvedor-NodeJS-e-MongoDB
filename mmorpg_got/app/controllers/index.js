@@ -19,7 +19,7 @@ module.exports.autenticar = function(application, req, res){
 	var connection = application.config.dbConnection;
 	var UsuariosDAO = new application.app.models.UsuariosDAO(connection);
 
-	UsuariosDAO.autenticar(dadosForm);
+	UsuariosDAO.autenticar(dadosForm, req, res);
 
-	res.send('tudo ok pra criar a sessão!');
+	//res.send('tudo ok pra criar a sessão!'); ja vai haver um response
 }
