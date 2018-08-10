@@ -33,7 +33,8 @@ UsuariosDAO.prototype.autenticar = function(usuario, req, res){
 				if(req.session.autorizado){
 					res.redirect("jogo");
 				} else {
-					res.render("index", {validacao : {}});
+					var erro = [ { msg : 'Usuário e ou Senha inválidos!' } ];
+					res.render("index", {validacao : erro, usuario : usuario});
 				}
 
 			});

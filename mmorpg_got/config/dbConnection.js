@@ -2,7 +2,7 @@
 var mongo = require('mongodb');
 
 var connMongoDB = function(){
-	console.log('Entrou na função de conexão');
+	//console.log('Entrou na função de conexão');
 	var db = new mongo.Db( // cria instancia da classe de conexao
 		'got', // string do nome do bd
 		new mongo.Server( // objeto de conexao com servidor
