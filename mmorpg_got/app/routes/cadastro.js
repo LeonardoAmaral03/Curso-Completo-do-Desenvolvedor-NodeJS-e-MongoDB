@@ -6,4 +6,8 @@ module.exports = function(application){
 	application.post('/cadastrar', function(req, res){
 		application.app.controllers.cadastro.cadastrar(application, req, res);
 	});
+
+	application.get('/parabens', function(req, res){
+		application.app.controllers.cadastro.parabens(application, req, res);
+	});
 }
